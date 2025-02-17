@@ -1,0 +1,12 @@
+services:
+  test-server:
+    build:
+      context: ./
+    ports:
+      - "4032:4032"
+    restart: unless-stopped
+    networks:
+      - test-network
+networks:
+  test-network:
+    driver: bridge
