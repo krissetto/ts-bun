@@ -1,0 +1,14 @@
+services:
+  test-server:
+    build:
+      context: ./
+    ports:
+      - "4032:4032"
+    restart: unless-stopped
+    # env_file: ./.env  # Uncomment if .env file exists
+    networks:
+      - test-network
+
+networks:
+  test-network:
+    driver: bridge
