@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+    container_name: app
+    restart: unless-stopped
+    init: true
+    ports:
+      - "4032:4032"
+    # env_file: ./.env  # Uncomment if .env file exists
+    # No external dependencies detected in README or source files
+    # Exposes port 4032 as per Dockerfile and README
